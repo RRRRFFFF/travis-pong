@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t travis-pong .
-  - docker tag travis-pong YOUR_DOCKER_HUB/travis-pong:latest
+  - docker tag travis-pong udacity-simple-node/travis-pong:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
